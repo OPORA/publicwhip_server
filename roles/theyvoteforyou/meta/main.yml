@@ -1,0 +1,26 @@
+---
+dependencies:
+  - role: base-server
+  - role: ANXS.mysql
+    mysql_bind_address: '127.0.0.1'
+    mysql_root_password: ''
+    mysql_databases:
+      - name: theyvoteforyou
+  - role: abtris.nginx-passenger
+  - role: rvm_io.rvm1-ruby
+    rvm1_rubies:
+      - ruby-2.0.0-p598
+    # Use round-robin pool of gpg key servers to avoid timeout
+    rvm1_gpg_key_server: 'hkp://pool.sks-keyservers.net'
+  - role: nickhammond.logrotate
+    logrotate_scripts:
+      - name: rails
+        path: "/srv/www/shared/log/*.log"
+        options:
+          - daily
+          - rotate 30
+          - compress
+          - missingok
+          - copytruncate
+  - role: azavea.elasticsearch
+    elasticsearch_bind_host: 127.0.0.1
