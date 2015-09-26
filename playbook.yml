@@ -5,8 +5,7 @@
 # vagrant provision local
 #
 # To run in production:
-# cd provisioning
-# ansible-playbook --user=root -i hosts playbook.yml
+# ansible-playbook --user=root -i provisioning/hosts provisioning/playbook.yml
 #
 - hosts: all
   sudo: true
