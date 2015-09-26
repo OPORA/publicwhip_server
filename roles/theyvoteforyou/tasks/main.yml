@@ -48,40 +48,29 @@
     mode: 0644
   with_items:
     - theyvoteforyou.org.au.dev.pem
-    # - test.theyvoteforyou.org.au.pem
-    # - theyvoteforyou.org.au_chain.pem
+    - tvfy-ukraine.oaf.org.au.pem # TODO: Replace with real one
   notify: nginx reload
 
 - name: Copy self-signed development SSL key
   copy:
-    content: "{{ theyvoteforyou_development_ssl_key }}"
+    content: "{{ development_ssl_key }}"
     dest: /etc/ssl/private/theyvoteforyou.org.au.dev.key
     owner: root
     group: ssl-cert
     mode: 0640
   notify: nginx reload
 
-# TODO Add a real certificate for test
-# - name: Copy self-signed test SSL key
-#   copy:
-#     content: "{{ theyvoteforyou_test_ssl_key }}"
-#     dest: /etc/ssl/private/test.theyvoteforyou.org.au.key
-#     owner: root
-#     group: ssl-cert
-#     mode: 0640
-#   notify: nginx reload
+# TODO: Replace with real one
+- name: Copy production SSL key
+  copy:
+    content: "{{ production_ssl_key }}"
+    dest: /etc/ssl/private/tvfy-ukraine.oaf.org.au.key
+    owner: root
+    group: ssl-cert
+    mode: 0640
+  notify: nginx reload
 
-# TODO
-# - name: Copy production SSL key
-#   copy:
-#     content: "{{ theyvoteforyou_production_ssl_key }}"
-#     dest: /etc/ssl/private/theyvoteforyou.org.au.key
-#     owner: root
-#     group: ssl-cert
-#     mode: 0640
-#   notify: nginx reload
-
-- name: Copy test/test password for staging site
+- name: Copy test/test password
   copy:
     src: htpasswd
     dest: /etc/nginx/
