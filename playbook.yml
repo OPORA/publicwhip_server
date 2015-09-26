@@ -1,4 +1,13 @@
 ---
+# This provisions a Linode for TVFY Ukraine
+#
+# To run in development:
+# vagrant provision local
+#
+# To run in production:
+# cd provisioning
+# ansible-playbook --user=root -i hosts playbook.yml
+#
 - hosts: all
   sudo: true
   roles:
