@@ -33,5 +33,5 @@
   apt: pkg=tzdata state=present
 
 - name: Set timezone in /etc/timezone
-  copy: content="Australia/Sydney\n" dest=/etc/timezone
+  copy: content="Europe/Kiev\n" dest=/etc/timezone
   notify: Update timezone
