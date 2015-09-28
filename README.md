@@ -7,7 +7,7 @@ This is the configuration management code that provisions a server for the Ukrai
 ### Provisioning
 
 For starting a local VM for testing provisioning you will need [Vagrant](https://www.vagrantup.com/).
-For configuration management you will need [Ansible](http://docs.ansible.com/).Also:
+For configuration management you will need [Ansible](http://docs.ansible.com/). Also:
 
     vagrant plugin install vagrant-hostsupdater
 
