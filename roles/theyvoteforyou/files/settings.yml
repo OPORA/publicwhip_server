@@ -7,7 +7,7 @@ elasticsearch: true
 # elasticsearch_url: http://localhost:9200
 
 # Name of project to display thoughout the application
-project_name: They Vote For You
+project_name: Вони голосують для тебе
 project_host: tvfy-ukraine.oaf.org.au
 project_twitter: TheyVote4You
 contact_email: contact@theyvoteforyou.org.au
