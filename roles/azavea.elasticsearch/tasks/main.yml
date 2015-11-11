@@ -7,7 +7,7 @@
                   state=present
 
 - name: Install ElasticSearch
-  apt: pkg=elasticsearch={{ elasticsearch_version }} state=present
+  apt: pkg=elasticsearch state=present
 
 - name: Configure ElasticSearch
   template: src=elasticsearch.yml.j2
