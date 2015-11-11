@@ -12,5 +12,6 @@ project_host: tvfy-ukraine.oaf.org.au
 project_twitter: TheyVote4You
 contact_email: contact@theyvoteforyou.org.au
 time_zone: Kyiv
+default_locale: uk
 # facebook_admins:
 #   - 100008526366720
