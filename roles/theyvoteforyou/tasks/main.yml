@@ -94,12 +94,9 @@
     dest: /etc/sudoers.d/
   notify: sudo reload
 
-# TODO
-# - name: Set up daily load cron job
-#   cron:
-#     name: theyvoteforyou_application_load_daily
-#     user: deploy
-#     hour: 9
-#     minute: 15
-#     weekday: 1-5
-#     job: "cd /srv/www/current && /usr/local/bin/bundle exec rake application:load:daily RAILS_ENV=production"
+- name: Set up daily update cron job
+  cron:
+    name: application_daily_update
+    user: deploy
+    special_time: daily
+    job: "cd /srv/www/current && /usr/local/bin/bundle exec rake application:load:ukraine:people application:load:ukraine:vote_events application:cache:all RAILS_ENV=production"
