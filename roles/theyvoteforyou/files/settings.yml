@@ -9,8 +9,8 @@ elasticsearch: true
 # Name of project to display thoughout the application
 project_name: Вони голосують для тебе
 project_host: tvfy-ukraine.oaf.org.au
-project_twitter: TheyVote4You
-contact_email: contact@theyvoteforyou.org.au
+project_twitter: opora
+contact_email: info@opora.org.ua
 time_zone: Kyiv
 default_locale: uk
 # facebook_admins:
