@@ -75,9 +75,6 @@ server {
   root /srv/www/current/public;
   passenger_enabled on;
 
-  auth_basic "Work in progress";
-  auth_basic_user_file htpasswd;
-
   location ^~ /assets/ {
     gzip_static on;
     expires max;
