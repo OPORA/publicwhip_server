@@ -38,12 +38,14 @@ server {
 server {
   listen 80;
   server_name www.rada4you.org;
+  server_name tvfy-ukraine.oaf.org.au;
   rewrite ^/(.*) https://rada4you.org/$1 permanent;
 }
 
 server {
   listen 443 ssl spdy;
   server_name www.rada4you.org;
+  server_name tvfy-ukraine.oaf.org.au;
   rewrite ^/(.*) https://rada4you.org/$1 permanent;
 
   ssl on;
