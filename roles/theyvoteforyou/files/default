@@ -37,7 +37,7 @@ server {
 ## HTTP
 server {
   listen 80;
-  server_name tvfy-ukraine.oaf.org.au;
+  server_name rada4you.org;
 
   root /srv/www/current/public;
   passenger_enabled on;
@@ -46,7 +46,7 @@ server {
 ## HTTPS
 server {
   listen 443 ssl spdy;
-  server_name tvfy-ukraine.oaf.org.au;
+  server_name rada4you.org;
 
   root /srv/www/current/public;
   passenger_enabled on;
