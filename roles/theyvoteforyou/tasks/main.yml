@@ -48,7 +48,7 @@
     mode: 0644
   with_items:
     - theyvoteforyou.org.au.dev.pem
-    - tvfy-ukraine.oaf.org.au.pem # TODO: Replace with real one
+    - rada4you-unified.crt
   notify: nginx reload
 
 - name: Copy self-signed development SSL key
@@ -60,11 +60,10 @@
     mode: 0640
   notify: nginx reload
 
-# TODO: Replace with real one
 - name: Copy production SSL key
   copy:
     content: "{{ production_ssl_key }}"
-    dest: /etc/ssl/private/tvfy-ukraine.oaf.org.au.key
+    dest: /etc/ssl/private/rada4you.key
     owner: root
     group: ssl-cert
     mode: 0640
